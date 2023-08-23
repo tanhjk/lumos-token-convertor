@@ -1,2 +1,2 @@
 # lumos-token-convertor
- Design Token convertor for Lumos Design System
+ Design Token Convertor for Lumos Design System
