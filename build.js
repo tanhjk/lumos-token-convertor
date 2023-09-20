@@ -281,7 +281,7 @@ StyleDictionary.registerFormat({
                 for (let ct in chartTokens){
                   // console.log(ct, '-',it);
                   if(chartTokens[ct].type === 'dimension'){
-                  strTokens += `$${kebabToCC(it+'-'+ct)}: '$${chartTokens[ct].value}px'; ${chartTokens[ct].description ? '/**  **/' : ''}  \n`
+                  strTokens += `$${kebabToCC(it+'-'+ct)}: '${chartTokens[ct].value}px'; ${chartTokens[ct].description ? '/**  **/' : ''}  \n`
                   }else{
                   strTokens += `$${kebabToCC(it+'-'+ct)}: $${chartTokens[ct].value};\n`
                   }
@@ -343,7 +343,7 @@ StyleDictionary.registerFormat({
             strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
           case 'fontFamily':
-            strTokens += `\t${kebabize(it)}: '${designTokens[it].value}', Helvetic, Arial, sans-serif; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            strTokens += `\t${kebabize(it)}: '${designTokens[it].value}', Helvetica, Arial, sans-serif; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
           case 'fontStyle':
             strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
@@ -362,18 +362,6 @@ StyleDictionary.registerFormat({
           break;
         }
 
-        // if(it !== 'paragraphIndent' || it !== 'paragraphSpacing'){
-        //   if(designTokens[it].type === 'dimension'){
-        //     strTokens += `${kebabize(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
-        //   }
-        //   else {
-  
-        //           strTokens += `${kebabize(it)}: ${designTokens[it].value};\n`
-             
-        
-        //     }
-        // }
-           
       }
       strTokens += `}\n`;
     }
@@ -384,7 +372,7 @@ StyleDictionary.registerFormat({
         // `token.value` is already resolved at this point.
         const refs = dictionary.getReferences(tkn.original.value);
         refs.forEach((ref) => { 
-          // styleVal = ref;
+         
           strTokens = strTokens.replace(ref.value, function () {
             return `${ref.path[2]}`;
           });
