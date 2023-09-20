@@ -1,0 +1,111 @@
+//design tokens 
+
+//texts tokens
+$textPrimary: $slate900;
+$textTeritary: $slate200;
+$textInverse: $slate000;
+$textDisabled: $slate200;
+$textAlert: $red500;
+$textWarning: $orange500;
+$textSuccess: $green600;
+$textInfo: $cobalt900;
+$textSecondary: $slate500;
+$textHighlight: $cobalt700;
+
+//links tokens
+$linkPrimary: $cobalt500;
+$linkSecondary: $slate600;
+$linkPrimaryHover: $cobalt200;
+$linkSecondaryHover: $slate300;
+
+//backgrounds tokens
+$backgroundPrimary: $slate000;
+$backgroundSecondary: $cobalt000;
+$backgroundContainer: $slate000;
+$backgroundAvatar: $cobalt900;
+$backgroundAlert: $red000;
+$backgroundSuccess: $green200;
+$backgroundCanvas: $white;
+$backgroundFloating: $white;
+$backgroundDisabled: $slate100;
+$backgroundTableHeader: $cobalt700;
+$backgroundInfo: $cobalt000;
+$backgroundWarning: $orange100;
+$backgroundHover: $slate100;
+$backgroundNotificationBanner: $slate900;
+$backgroundOverlay: $slate200;
+
+//icons tokens
+$iconPrimary: $slate900;
+$iconSecondary: $slate500;
+$iconActive: $cobalt900;
+$iconAlert: $red500;
+$iconSuccess: $green600;
+$iconInverse: $slate100;
+$iconDisabled: $slate200;
+$iconHighlight: $cobalt700;
+$iconWarning: $orange500;
+$iconHover: $cobalt600;
+
+//sizes tokens
+$drawerWidth: '264px'; 
+$drawerWidthMobile: '286px'; 
+$drawerWidthMinimized: '76px'; 
+$buttonMinHeight: '40px'; 
+$buttonMinWidth: '120px'; 
+$tabUnderlineWidth: '48px'; 
+$tooltipMaxWidth: '300px'; 
+$popUpWidth: '755px'; 
+
+//charts tokens
+$donutFillCombiFillTrack: $slate100;
+$donutFillCombiDonutFill: $cobalt700;
+$axisGrid: $slate100;
+$axisBase: $slate200;
+$vertBarFillCombiVertBarFill09: $cobalt900;
+$vertBarFillCombiVertBarFill08: $cobalt800;
+$vertBarFillCombiVertBarFill07: $cobalt700;
+$vertBarFillCombiVertBarFill06: $cobalt600;
+$vertBarFillCombiVertBarFill05: $cobalt500;
+$vertBarFillCombiBarHover: $slate100;
+$vertBarFillCombiVertBarFill04: $cobalt400;
+$vertBarFillCombiVertBarFill03: $cobalt300;
+$vertBarFillCombiVertBarFill02: $cobalt200;
+$vertBarFillCombiVertBarFill01: $cobalt100;
+$vertBarFillCombiVertBarFill00: $cobalt000;
+$barSizesVertBarWidthL: '$64px';   
+$barSizesVertBarWidthM: '$32px';   
+$barSizesHoriBarHeight: '$24px';   
+$horiBarFillCombiHoriBarFill01: $red300;
+$horiBarFillCombiHoriBarFill02: $green400;
+
+//buttons tokens
+$formBorder: $slate200;
+$optionHover: $cobalt000;
+$buttonPrimary: $cobalt700;
+$buttonSecondary: $slate000;
+$buttonPrimaryBorder: $cobalt700;
+$buttonSecondaryBorder: $slate200;
+$buttonPrimaryHover: $cobalt600;
+$buttonSecondaryHover: $cobalt000;
+$buttonDisabled: $slate100;
+
+//checkbox tokens
+$checkboxActive: $cobalt700;
+$checkboxHoverBorder: $cobalt700;
+$checkboxDefault: $white;
+$checkboxDefaultBorder: $slate200;
+$checkboxDisabled: $slate100;
+$checkboxActiveBorder: $cobalt700;
+$checkboxDisabledBorder: $slate200;
+
+//toggle tokens
+$toggleOn: $cobalt700;
+$toggleOff: $slate200;
+$toggleDisabled: $slate200;
+$toggleSwitch: $slate000;
+$toggleOffHover: $slate400;
+$toggleSwitchDisabled: $slate100;
+
+//borders tokens
+$borderPrimary: $slate100;

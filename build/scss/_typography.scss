@@ -1,0 +1,261 @@
+//design tokens 
+
+.pageTitle {
+	font-size: 36px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 50.4px; 
+	text-decoration: none; 
+}
+
+.sectionTitle {
+	font-size: 28px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 39.2px; 
+	text-decoration: none; 
+}
+
+.containerTitle {
+	font-size: 24px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 33.6px; 
+	text-decoration: none; 
+}
+
+.containerSubtitle {
+	font-size: 14px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 19.6px; 
+	text-decoration: none; 
+}
+
+.labelEmphasisHigh {
+	font-size: 24px; 
+	text-decoration: none; 
+	font-family: 'Source Sans Pro', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 33.6px; 
+	text-decoration: none; 
+}
+
+.labelEmphasisMid {
+	font-size: 20px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 28px; 
+	text-decoration: none; 
+}
+
+.labelemphasismidunderline {
+	font-size: 20px; 
+	text-decoration: underline; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 28px; 
+	text-decoration: none; 
+}
+
+.labelemphasislow {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.labelemphasisextralow {
+	font-size: 14px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 19.6px; 
+	text-decoration: none; 
+}
+
+.labeldefault {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.labelsmalldefault {
+	font-size: 14px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 19.6px; 
+	text-decoration: none; 
+}
+
+.labelextrasmalldefault {
+	font-size: 12px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 16.8px; 
+	text-decoration: none; 
+}
+
+.labelextraextrasmalldefault {
+	font-size: 10px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 14px; 
+	text-decoration: none; 
+}
+
+.menusectionlabel {
+	font-size: 12px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 1px; 
+	line-height: 16.8px; 
+	text-decoration: uppercase; 
+}
+
+.captionlabel {
+	font-size: 14px; 
+	text-decoration: none; 
+	font-family: 'Source Sans Pro', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 16.1px; 
+	text-decoration: none; 
+}
+
+.tableheaderlabel {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 18.4px; 
+	text-decoration: none; 
+}
+
+.tableheadersublabel {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 18.4px; 
+	text-decoration: none; 
+}
+
+.tableheadersublabelItalic {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: italic; 
+	letter-spacing: 0px; 
+	line-height: 18.4px; 
+	text-decoration: none; 
+}
+
+.tablelinklabel {
+	font-size: 16px; 
+	text-decoration: underline; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.tablecontent {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.tablecontentemphasis {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.tablecontentitalic {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: italic; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.datalabel {
+	font-size: 36px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 54px; 
+	text-decoration: none; 
+}
+
+.labeldefaultlink {
+	font-size: 16px; 
+	text-decoration: underline; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.labeldefaultlinkitalic {
+	font-size: 16px; 
+	text-decoration: underline; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: italic; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}
+
+.buttondefault {
+	font-size: 16px; 
+	text-decoration: none; 
+	font-family: 'Source Sans 3', Helvetic, Arial, sans-serif; 
+	font-style: normal; 
+	letter-spacing: 0px; 
+	line-height: 22.4px; 
+	text-decoration: none; 
+}

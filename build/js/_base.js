@@ -39,7 +39,7 @@ const identities = {
 				orange400: '#f4a63b',
 				orange500: '#ff9029',
 				slate000: '#f9fafc',
-				slate100: '#dbdbdc',
+				slate100: '#eef1f5',
 				slate200: '#c1c1c6',
 				slate300: '#a8a8af',
 				slate400: '#8f8f98',
@@ -51,7 +51,7 @@ const identities = {
 				white: '#ffffff',
 				black: '#121212',
 		},
-		fontsizes:{
+		fontSizes:{
 				fs60: '60px',
 				fs54: '54px',
 				fs48: '48px',
@@ -62,21 +62,37 @@ const identities = {
 				fs16: '16px',
 				fs14: '14px',
 				fs12: '12px',
+				fs10: '10px',
 		},
 		spacings:{
 				spacingXs: '4px',
-				spacinSm: '8px',
+				spacingSm: '8px',
 				spacingMd: '16px',
 				spacingLg: '24px',
 				spacingXl: '32px',
+				spacingXxl: '64px',
 		},
-		borderradius:{
+		borderRadius:{
 				brContainer: '8px',
-				brtags: '2px',
+				brTags: '2px',
 		},
 		sizings:{
 				iconSm: '16px',
 				iconMd: '24px',
 				iconLg: '32px',
+		},
+		lineHeight:{
+				lhParagraph: '140%',
+				lhHeadline: '115%',
+		},
+		fontWeight:{
+				light300: '300',
+				regular400: '400',
+				semiBold600: '600',
+				bold: '700',
+		},
+		letterSpacing:{
+				spacingSm: '0px',
+				spacingMd: '1px',
 		},
 }
