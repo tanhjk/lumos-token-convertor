@@ -1,6 +1,6 @@
 //design tokens 
 
-.pageTitle {
+@mixin pageTitle {
 	font-size: 36px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -10,7 +10,7 @@
 	text-decoration: none; 
 }
 
-.sectionTitle {
+@mixin sectionTitle {
 	font-size: 28px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -20,7 +20,7 @@
 	text-decoration: none; 
 }
 
-.containerTitle {
+@mixin containerTitle {
 	font-size: 24px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -30,7 +30,7 @@
 	text-decoration: none; 
 }
 
-.containerSubtitle {
+@mixin containerSubtitle {
 	font-size: 14px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -40,7 +40,7 @@
 	text-decoration: none; 
 }
 
-.labelEmphasisHigh {
+@mixin labelEmphasisHigh {
 	font-size: 24px; 
 	text-decoration: none; 
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; 
@@ -50,7 +50,7 @@
 	text-decoration: none; 
 }
 
-.labelEmphasisMid {
+@mixin labelEmphasisMid {
 	font-size: 20px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -59,8 +59,8 @@
 	line-height: 28px; 
 	text-decoration: none; 
 }
-  
-.labelEmphasisMidUnderline {
+
+@mixin labelEmphasisMidUnderline {
 	font-size: 20px; 
 	text-decoration: underline; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -70,7 +70,7 @@
 	text-decoration: none; 
 }
 
-.labelEmphasisLow {
+@mixin labelEmphasisLow {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -80,7 +80,7 @@
 	text-decoration: none; 
 }
 
-.labelEmphasisExtraLow {
+@mixin labelEmphasisExtraLow {
 	font-size: 14px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -90,7 +90,7 @@
 	text-decoration: none; 
 }
 
-.labelDefault {
+@mixin labelDefault {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -100,7 +100,7 @@
 	text-decoration: none; 
 }
 
-.labelSmallDefault {
+@mixin labelSmallDefault {
 	font-size: 14px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -110,7 +110,7 @@
 	text-decoration: none; 
 }
 
-.labelExtraSmallDefault {
+@mixin labelExtraSmallDefault {
 	font-size: 12px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -120,7 +120,7 @@
 	text-decoration: none; 
 }
 
-.labelExtraExtraSmallDefault {
+@mixin labelExtraExtraSmallDefault {
 	font-size: 10px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -130,7 +130,7 @@
 	text-decoration: none; 
 }
 
-.menuSectionLabel {
+@mixin menuSectionLabel {
 	font-size: 12px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -140,7 +140,7 @@
 	text-decoration: uppercase; 
 }
 
-.captionLabel {
+@mixin captionLabel {
 	font-size: 14px; 
 	text-decoration: none; 
 	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; 
@@ -150,7 +150,7 @@
 	text-decoration: none; 
 }
 
-.tableHeaderLabel {
+@mixin tableHeaderLabel {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -160,7 +160,7 @@
 	text-decoration: none; 
 }
 
-.tableHeaderSublabel {
+@mixin tableHeaderSublabel {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -170,7 +170,7 @@
 	text-decoration: none; 
 }
 
-.tableHeaderSublabelItalic {
+@mixin tableHeaderSublabelItalic {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -180,7 +180,7 @@
 	text-decoration: none; 
 }
 
-.tableLinkLabel {
+@mixin tableLinkLabel {
 	font-size: 16px; 
 	text-decoration: underline; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -190,7 +190,7 @@
 	text-decoration: none; 
 }
 
-.tableContent {
+@mixin tableContent {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -200,7 +200,7 @@
 	text-decoration: none; 
 }
 
-.tableContentEmphasis {
+@mixin tableContentEmphasis {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -210,7 +210,7 @@
 	text-decoration: none; 
 }
 
-.tableContentItalic {
+@mixin tableContentItalic {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -220,7 +220,7 @@
 	text-decoration: none; 
 }
 
-.dataLabel {
+@mixin dataLabel {
 	font-size: 36px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -230,7 +230,7 @@
 	text-decoration: none; 
 }
 
-.labelDefaultLink {
+@mixin labelDefaultLink {
 	font-size: 16px; 
 	text-decoration: underline; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -240,7 +240,7 @@
 	text-decoration: none; 
 }
 
-.labelDefaultLinkItalic {
+@mixin labelDefaultLinkItalic {
 	font-size: 16px; 
 	text-decoration: underline; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
@@ -250,7 +250,7 @@
 	text-decoration: none; 
 }
 
-.buttonDefault {
+@mixin buttonDefault {
 	font-size: 16px; 
 	text-decoration: none; 
 	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 

@@ -160,18 +160,18 @@ StyleDictionary.registerFormat({
 
       for (let it in designTokens) {
         if(designTokens[it].type === 'color'){
-        strTokens += `$${kebabToCC(it)}: '${designTokens[it].value.slice(0, -2)}';\n`
+        strTokens += `$${kebabToCC(it)}: ${designTokens[it].value.slice(0, -2)};\n`
         }
         if(designTokens[it].type === 'dimension'){
           switch(x){
             case 'font-weight':
-              strTokens += `$${kebabToCC(it)}: '${designTokens[it].value}';\n`
+              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value};\n`
               break;
             case 'line-height':
-              strTokens += `$${kebabToCC(it)}: '${designTokens[it].value}%';\n`
+              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}%;\n`
               break;
             default:
-              strTokens += `$${kebabToCC(it)}: '${designTokens[it].value}px';\n`
+              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}px;\n`
               break;
           }
         }
@@ -271,25 +271,42 @@ StyleDictionary.registerFormat({
       for (let it in designTokens) {
 
         if(designTokens[it].type === 'dimension'){
-          strTokens += `$${kebabToCC(it)}: '${designTokens[it].value}px'; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
-          }else {
-
+          strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          }else{
+            console.log(x);
             switch(x){
+              case 'texts' :
+              case 'links' :
+                strTokens += `@mixin ${kebabToCC(it)}{ \n color: $${designTokens[it].value};\n}\n`
+                break; 
+              case 'backgrounds' :
+                strTokens += `@mixin ${kebabToCC(it)}{ \n background-color: $${designTokens[it].value};\n}\n`
+                break;
+              case 'icons' :
+                  strTokens += `@mixin ${kebabToCC(it)}{ \n fill: $${designTokens[it].value};\n}\n`
+                  break; 
               case 'charts':
                 let chartTokens = designTokens[it];
                 // console.log(chartTokens, it);
                 for (let ct in chartTokens){
                   // console.log(ct, '-',it);
                   if(chartTokens[ct].type === 'dimension'){
-                  strTokens += `$${kebabToCC(it+'-'+ct)}: '${chartTokens[ct].value}px'; ${chartTokens[ct].description ? '/**  **/' : ''}  \n`
+                  strTokens += `$${kebabToCC(it+'-'+ct)}: ${chartTokens[ct].value}px; ${chartTokens[ct].description ? '/**  **/' : ''}  \n`
                   }else{
                   strTokens += `$${kebabToCC(it+'-'+ct)}: $${chartTokens[ct].value};\n`
                   }
                 }
-                break;
-              case 'sizes':
-                strTokens += `$${kebabToCC(it)}: '$${designTokens[it].value}';  ${designTokens[it].description ? '/**  **/' : ''}\n`
-                break;
+                break; 
+              case 'buttons':
+              case 'checkbox':
+              case 'toggle':
+              case 'borders':
+                if(it.indexOf('border') >= 0){
+                  strTokens += `@mixin ${kebabToCC(it)}{ \n border-color: $${designTokens[it].value};\n}\n`
+                }else{
+                  strTokens += `@mixin ${kebabToCC(it)}{ \n background-color: $${designTokens[it].value};\n}\n`
+                }
+                break; 
               default: 
                 strTokens += `$${kebabToCC(it)}: $${designTokens[it].value};\n`
                 break;
@@ -330,7 +347,7 @@ StyleDictionary.registerFormat({
     // strTokens += `const theme = {\n\t `;
     for (let x in obj) {
  
-      strTokens += `\n.${kebabToCC(x)} {\n`
+      strTokens += `\n@mixin ${kebabToCC(x)} {\n`
       let designTokens = obj[x];
       
       for (let it in designTokens) {  
@@ -364,7 +381,7 @@ StyleDictionary.registerFormat({
 
       }
       strTokens += `}\n`;
-    }
+    } 
     // strTokens += `}`;
     dictionary.allTokens.map((tkn) => {
       if (dictionary.usesReference(tkn.original.value)) {
