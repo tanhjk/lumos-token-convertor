@@ -1,6 +1,18 @@
 //Type tokens in JS 
 textStyles:{ 
-	  pageTitle:  `
+	  dataLabel:  `
+	font-size: 36px; 
+	font-weight: 600; 
+	letter-spacing: 0px; 
+	line-height: 54; 
+`
+ tagEmphasis:  `
+	font-size: 14px; 
+	font-weight: 700; 
+	letter-spacing: 0px; 
+	line-height: 19.6; 
+`
+ pageTitle:  `
 	font-size: 36px; 
 	font-weight: 700; 
 	letter-spacing: 0px; 
@@ -23,6 +35,18 @@ textStyles:{
 	font-weight: 600; 
 	letter-spacing: 0px; 
 	line-height: 115%; 
+`
+ labelLargeDefaultUnderline:  `
+	font-size: 18px; 
+	font-weight: 400; 
+	letter-spacing: 0px; 
+	line-height: 25.2; 
+`
+ labelLargeDefault:  `
+	font-size: 18px; 
+	font-weight: 400; 
+	letter-spacing: 0px; 
+	line-height: 25.2; 
 `
  labelDefault:  `
 	font-size: 16px; 
@@ -48,18 +72,6 @@ textStyles:{
 	letter-spacing: 0px; 
 	line-height: 14; 
 `
- labelDefaultLink:  `
-	font-size: 16px; 
-	font-weight: 400; 
-	letter-spacing: 0px; 
-	line-height: 22.4; 
-`
- labelDefaultLinkItalic:  `
-	font-size: 16px; 
-	font-weight: 400; 
-	letter-spacing: 0px; 
-	line-height: 22.4; 
-`
  labelEmphasisHigh:  `
 	font-size: 24px; 
 	font-weight: 600; 
@@ -67,16 +79,16 @@ textStyles:{
 	line-height: 33.6; 
 `
  labelEmphasisMid:  `
-	font-size: 20px; 
+	font-size: 18px; 
 	font-weight: 600; 
 	letter-spacing: 0px; 
-	line-height: 28; 
+	line-height: 25.2; 
 `
  labelEmphasisMidUnderline:  `
-	font-size: 20px; 
+	font-size: 18px; 
 	font-weight: 600; 
 	letter-spacing: 0px; 
-	line-height: 28; 
+	line-height: 25.2; 
 `
  labelEmphasisLow:  `
 	font-size: 16px; 
@@ -89,6 +101,18 @@ textStyles:{
 	font-weight: 600; 
 	letter-spacing: 0px; 
 	line-height: 19.6; 
+`
+ menuSectionLabel:  `
+	font-size: 12px; 
+	font-weight: 400; 
+	letter-spacing: 1px; 
+	line-height: 16.8; 
+`
+ captionLabel:  `
+	font-size: 14px; 
+	font-weight: 400; 
+	letter-spacing: 0px; 
+	line-height: 16.1; 
 `
  tableHeaderLabel:  `
 	font-size: 16px; 
@@ -132,23 +156,23 @@ textStyles:{
 	letter-spacing: 0px; 
 	line-height: 22.4; 
 `
- menuSectionLabel:  `
-	font-size: 12px; 
-	font-weight: 400; 
-	letter-spacing: 1px; 
-	line-height: 16.8; 
-`
- captionLabel:  `
-	font-size: 14px; 
+ labelDefaultLink:  `
+	font-size: 16px; 
 	font-weight: 400; 
 	letter-spacing: 0px; 
-	line-height: 16.1; 
+	line-height: 22.4; 
 `
- dataLabel:  `
-	font-size: 36px; 
-	font-weight: 600; 
+ labelDefaultLinkItalic:  `
+	font-size: 16px; 
+	font-weight: 400; 
 	letter-spacing: 0px; 
-	line-height: 54; 
+	line-height: 22.4; 
+`
+ labelLargeDefaultLink:  `
+	font-size: 18px; 
+	font-weight: 400; 
+	letter-spacing: 0px; 
+	line-height: 25.2; 
 `
  buttonDefault:  `
 	font-size: 16px; 
@@ -156,10 +180,10 @@ textStyles:{
 	letter-spacing: 0px; 
 	line-height: 22.4; 
 `
- tagEmphasis:  `
-	font-size: 14px; 
-	font-weight: 700; 
+ buttonLargeDefault:  `
+	font-size: 18px; 
+	font-weight: 400; 
 	letter-spacing: 0px; 
-	line-height: 19.6; 
+	line-height: 25.2; 
 `
 }

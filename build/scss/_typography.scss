@@ -1,5 +1,25 @@
 //design tokens 
 
+@mixin dataLabel {
+	font-size: $fs36; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tagEmphasis {
+	font-size: $fs14; 
+	text-decoration: none; 
+	font-weight: $bold;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
 @mixin pageTitle {
 	font-size: $fs36; 
 	text-decoration: none; 
@@ -37,6 +57,26 @@
 	font-style: normal; 
 	letter-spacing: $lsSm; 
 	line-height: $lhHeadline; 
+	text-transform: none; 
+}
+
+@mixin labelLargeDefaultUnderline {
+	font-size: $fs18; 
+	text-decoration: underline; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelLargeDefault {
+	font-size: $fs18; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
 	text-transform: none; 
 }
 
@@ -80,26 +120,6 @@
 	text-transform: none; 
 }
 
-@mixin labelDefaultLink {
-	font-size: $fs16; 
-	text-decoration: underline; 
-	font-weight: $regular400;  
-	font-style: normal; 
-	letter-spacing: $lsSm; 
-	line-height: $lhParagraph; 
-	text-transform: none; 
-}
-
-@mixin labelDefaultLinkItalic {
-	font-size: $fs16; 
-	text-decoration: underline; 
-	font-weight: $regular400;  
-	font-style: italic; 
-	letter-spacing: $lsSm; 
-	line-height: $lhParagraph; 
-	text-transform: none; 
-}
-
 @mixin labelEmphasisHigh {
 	font-size: $fs24; 
 	text-decoration: none; 
@@ -111,7 +131,7 @@
 }
 
 @mixin labelEmphasisMid {
-	font-size: $fs20; 
+	font-size: $fs18; 
 	text-decoration: none; 
 	font-weight: $semiBold600;  
 	font-style: normal; 
@@ -121,7 +141,7 @@
 }
 
 @mixin labelEmphasisMidUnderline {
-	font-size: $fs20; 
+	font-size: $fs18; 
 	text-decoration: underline; 
 	font-weight: $semiBold600;  
 	font-style: normal; 
@@ -144,6 +164,26 @@
 	font-size: $fs14; 
 	text-decoration: none; 
 	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin menuSectionLabel {
+	font-size: $fs12; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsMd; 
+	line-height: $lhParagraph; 
+	text-transform: uppercase; 
+}
+
+@mixin captionLabel {
+	font-size: $fs14; 
+	text-decoration: none; 
+	font-weight: $regular400;  
 	font-style: normal; 
 	letter-spacing: $lsSm; 
 	line-height: $lhParagraph; 
@@ -220,19 +260,9 @@
 	text-transform: none; 
 }
 
-@mixin menuSectionLabel {
-	font-size: $fs12; 
-	text-decoration: none; 
-	font-weight: $regular400;  
-	font-style: normal; 
-	letter-spacing: $lsMd; 
-	line-height: $lhParagraph; 
-	text-transform: uppercase; 
-}
-
-@mixin captionLabel {
-	font-size: $fs14; 
-	text-decoration: none; 
+@mixin labelDefaultLink {
+	font-size: $fs16; 
+	text-decoration: underline; 
 	font-weight: $regular400;  
 	font-style: normal; 
 	letter-spacing: $lsSm; 
@@ -240,10 +270,20 @@
 	text-transform: none; 
 }
 
-@mixin dataLabel {
-	font-size: $fs36; 
+@mixin labelDefaultLinkItalic {
+	font-size: $fs16; 
+	text-decoration: underline; 
+	font-weight: $regular400;  
+	font-style: italic; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelLargeDefaultLink {
+	font-size: $fs18; 
 	text-decoration: none; 
-	font-weight: $semiBold600;  
+	font-weight: $regular400;  
 	font-style: normal; 
 	letter-spacing: $lsSm; 
 	line-height: $lhParagraph; 
@@ -260,10 +300,10 @@
 	text-transform: none; 
 }
 
-@mixin tagEmphasis {
-	font-size: $fs14; 
+@mixin buttonLargeDefault {
+	font-size: $fs18; 
 	text-decoration: none; 
-	font-weight: $bold;  
+	font-weight: $regular400;  
 	font-style: normal; 
 	letter-spacing: $lsSm; 
 	line-height: $lhParagraph; 

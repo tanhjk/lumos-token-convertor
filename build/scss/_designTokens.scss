@@ -2,7 +2,7 @@
 
 //texts tokens
 @mixin textPrimary{ 
- color: $slate900;  
+ color: $slate900; 
 }
 @mixin textTeritary{ 
  color: $slate200; 
@@ -22,9 +22,6 @@
 @mixin textSuccess{ 
  color: $green600; 
 }
-@mixin textInfo{ 
- color: $cobalt900; /**to be remove **/
-}
 @mixin textSecondary{ 
  color: $slate500; 
 }
@@ -33,6 +30,9 @@
 }
 @mixin textHiglighterBackground{ 
  color: $mustard200; 
+}
+@mixin textHover{ 
+ color: $cobalt500; 
 }
 
 //links tokens
@@ -43,7 +43,7 @@
  color: $slate600; 
 }
 @mixin linkPrimaryHover{ 
- color: $cobalt200; 
+ color: $cobalt500; 
 }
 @mixin linkSecondaryHover{ 
  color: $slate300; 
@@ -128,12 +128,14 @@
  color: $orange500; 
 }
 @mixin iconHover{ 
- color: $cobalt600; 
+ color: $cobalt500; 
+}
+@mixin iconBackground{ 
+ color: $cobalt100; 
 }
 
 //sizes tokens
 $drawerWidth: 264px; 
-$drawerWidthMobile: 286px; /**To remove (no use case) **/
 $drawerWidthMinimized: 76px; 
 $buttonMinHeight: 40px; 
 $buttonMinWidth: 120px; 
@@ -143,6 +145,8 @@ $popUpWidth: 755px;
 $sideDrawerWidth: 340px; 
 $textAreaMinHeight: 100px; 
 $textAreaMaxHeight: 250px; 
+$optionSwitcherMinWidth: 270px; 
+$optionSwitcherBaseMinWidth: 120px; 
 
 //charts tokens
 $donutFillCombiFillTrack: $cobalt000; 
@@ -188,7 +192,7 @@ $horiBarFillCombiHoriBarFill02: $green400;
  border-color: $slate200; 
 }
 @mixin buttonPrimaryHover{ 
- background-color: $cobalt600; 
+ background-color: $cobalt500; 
 }
 @mixin buttonSecondaryHover{ 
  background-color: $cobalt000; 
@@ -248,7 +252,7 @@ $horiBarFillCombiHoriBarFill02: $green400;
  border-color: $slate100; 
 }
 @mixin borderDragover{ 
- border-color: $cobalt700; 
+ border-color: $cobalt700; /**to remove and replace with input-dragover-border **/
 }
 
 //input tokens
@@ -258,6 +262,18 @@ $inputErrorBorder: $red500;
 $inputDisableBorder: $slate200; 
 $inputFill: $slate000; 
 $inputDisabledFill: $slate100; 
+$inputDragoverBorder: $cobalt700; /**new: to replace border-dragover **/
 
 //uiControlBar tokens
 $uiControlBar: $slate200; 
+
+//optionSwitcher tokens
+$optionSwitch: $slate000; 
+$optionSwitchSelected: $cobalt700; 
+$optionSwitchBorder: $slate200; 
+$optionSwitchHover: $cobalt000; 
+$optionSwitchDisabled: $slate100; 
+
+//display tokens
+$displayFill: $cobalt000; 
+$displayBorder: $cobalt200; 

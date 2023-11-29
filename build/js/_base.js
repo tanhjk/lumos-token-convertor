@@ -10,7 +10,7 @@ const identities = {
 				cobalt300: '#6e99d9',
 				cobalt200: '#85a9e0',
 				cobalt100: '#9dbbe7',
-				cobalt000: '#ceddf3',
+				cobalt000: '#e3edfb',
 				red000: '#ffebeb',
 				red100: '#ffbebe',
 				red200: '#ff9191',
@@ -73,6 +73,7 @@ const identities = {
 				spacingXl: '32px',
 				spacingXxxl: '64px',
 				spacingXxl: '48px',
+				spacingXxxxl: '80px',
 		},
 		borderRadius:{
 				brContainer: '8px',

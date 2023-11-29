@@ -8,15 +8,15 @@ const theme = {
 				textAlert: identities.colors.red500,
 				textWarning: identities.colors.orange500,
 				textSuccess: identities.colors.green600,
-				textInfo: identities.colors.cobalt900,
 				textSecondary: identities.colors.slate500,
 				textHighlight: identities.colors.cobalt700,
 				textHiglighterBackground: identities.colors.mustard200,
+				textHover: identities.colors.cobalt500,
 		},
 		links:{
 				linkPrimary: identities.colors.cobalt700,
 				linkSecondary: identities.colors.slate600,
-				linkPrimaryHover: identities.colors.cobalt200,
+				linkPrimaryHover: identities.colors.cobalt500,
 				linkSecondaryHover: identities.colors.slate300,
 		},
 		backgrounds:{
@@ -47,11 +47,11 @@ const theme = {
 				iconDisabled: identities.colors.slate200,
 				iconHighlight: identities.colors.cobalt700,
 				iconWarning: identities.colors.orange500,
-				iconHover: identities.colors.cobalt600,
+				iconHover: identities.colors.cobalt500,
+				iconBackground: identities.colors.cobalt100,
 		},
 		sizes:{
 				drawerWidth: '264px', 
-				drawerWidthMobile: '286px', /**To remove (no use case) **/
 				drawerWidthMinimized: '76px', 
 				buttonMinHeight: '40px', 
 				buttonMinWidth: '120px', 
@@ -61,6 +61,8 @@ const theme = {
 				sideDrawerWidth: '340px', 
 				textAreaMinHeight: '100px', 
 				textAreaMaxHeight: '250px', 
+				optionSwitcherMinWidth: '270px', 
+				optionSwitcherBaseMinWidth: '120px', 
 		},
 		charts:{
 				donutFillCombiFillTrack: identities.colors.cobalt000,
@@ -93,7 +95,7 @@ const theme = {
 				buttonSecondary: identities.colors.slate000,
 				buttonPrimaryBorder: identities.colors.cobalt700,
 				buttonSecondaryBorder: identities.colors.slate200,
-				buttonPrimaryHover: identities.colors.cobalt600,
+				buttonPrimaryHover: identities.colors.cobalt500,
 				buttonSecondaryHover: identities.colors.cobalt000,
 				buttonDisabled: identities.colors.slate100,
 		},
@@ -126,8 +128,20 @@ const theme = {
 				inputDisableBorder: identities.colors.slate200,
 				inputFill: identities.colors.slate000,
 				inputDisabledFill: identities.colors.slate100,
+				inputDragoverBorder: identities.colors.cobalt700,
 		},
 		uiControlBar:{
 				uiControlBar: identities.colors.slate200,
+		},
+		optionSwitcher:{
+				optionSwitch: identities.colors.slate000,
+				optionSwitchSelected: identities.colors.cobalt700,
+				optionSwitchBorder: identities.colors.slate200,
+				optionSwitchHover: identities.colors.cobalt000,
+				optionSwitchDisabled: identities.colors.slate100,
+		},
+		display:{
+				displayFill: identities.colors.cobalt000,
+				displayBorder: identities.colors.cobalt200,
 		},
 }
