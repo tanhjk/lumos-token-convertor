@@ -1,261 +1,271 @@
 //design tokens 
 
 @mixin pageTitle {
-	font-size: 36px; 
+	font-size: $fs36; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $bold;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 50.4px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhHeadline; 
+	text-transform: none; 
 }
 
 @mixin sectionTitle {
-	font-size: 28px; 
+	font-size: $fs28; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $semiBold600;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 39.2px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhHeadline; 
+	text-transform: none; 
 }
 
 @mixin containerTitle {
-	font-size: 24px; 
+	font-size: $fs24; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $semiBold600;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 33.6px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhHeadline; 
+	text-transform: none; 
 }
 
 @mixin containerSubtitle {
-	font-size: 14px; 
+	font-size: $fs14; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $semiBold600;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 19.6px; 
-	text-decoration: none; 
-}
-
-@mixin labelEmphasisHigh {
-	font-size: 24px; 
-	text-decoration: none; 
-	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 33.6px; 
-	text-decoration: none; 
-}
-
-@mixin labelEmphasisMid {
-	font-size: 20px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 28px; 
-	text-decoration: none; 
-}
-
-@mixin labelEmphasisMidUnderline {
-	font-size: 20px; 
-	text-decoration: underline; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 28px; 
-	text-decoration: none; 
-}
-
-@mixin labelEmphasisLow {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
-}
-
-@mixin labelEmphasisExtraLow {
-	font-size: 14px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 19.6px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhHeadline; 
+	text-transform: none; 
 }
 
 @mixin labelDefault {
-	font-size: 16px; 
+	font-size: $fs16; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }
 
 @mixin labelSmallDefault {
-	font-size: 14px; 
+	font-size: $fs14; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 19.6px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }
 
 @mixin labelExtraSmallDefault {
-	font-size: 12px; 
+	font-size: $fs12; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 16.8px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }
 
 @mixin labelExtraExtraSmallDefault {
-	font-size: 10px; 
+	font-size: $fs10; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 14px; 
-	text-decoration: none; 
-}
-
-@mixin menuSectionLabel {
-	font-size: 12px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 1px; 
-	line-height: 16.8px; 
-	text-decoration: uppercase; 
-}
-
-@mixin captionLabel {
-	font-size: 14px; 
-	text-decoration: none; 
-	font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 16.1px; 
-	text-decoration: none; 
-}
-
-@mixin tableHeaderLabel {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 18.4px; 
-	text-decoration: none; 
-}
-
-@mixin tableHeaderSublabel {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 18.4px; 
-	text-decoration: none; 
-}
-
-@mixin tableHeaderSublabelItalic {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: italic; 
-	letter-spacing: 0px; 
-	line-height: 18.4px; 
-	text-decoration: none; 
-}
-
-@mixin tableLinkLabel {
-	font-size: 16px; 
-	text-decoration: underline; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
-}
-
-@mixin tableContent {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
-}
-
-@mixin tableContentEmphasis {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
-}
-
-@mixin tableContentItalic {
-	font-size: 16px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: italic; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
-}
-
-@mixin dataLabel {
-	font-size: 36px; 
-	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
-	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 54px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }
 
 @mixin labelDefaultLink {
-	font-size: 16px; 
+	font-size: $fs16; 
 	text-decoration: underline; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
-	text-decoration: none; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }
 
 @mixin labelDefaultLinkItalic {
-	font-size: 16px; 
+	font-size: $fs16; 
 	text-decoration: underline; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: italic; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelEmphasisHigh {
+	font-size: $fs24; 
 	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelEmphasisMid {
+	font-size: $fs20; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelEmphasisMidUnderline {
+	font-size: $fs20; 
+	text-decoration: underline; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelEmphasisLow {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin labelEmphasisExtraLow {
+	font-size: $fs14; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableHeaderLabel {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableHeaderSublabel {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableHeaderSublabelItalic {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: italic; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableContent {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableContentEmphasis {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableContentItalic {
+	font-size: $fs16; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: italic; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tableLinkLabel {
+	font-size: $fs16; 
+	text-decoration: underline; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin menuSectionLabel {
+	font-size: $fs12; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsMd; 
+	line-height: $lhParagraph; 
+	text-transform: uppercase; 
+}
+
+@mixin captionLabel {
+	font-size: $fs14; 
+	text-decoration: none; 
+	font-weight: $regular400;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin dataLabel {
+	font-size: $fs36; 
+	text-decoration: none; 
+	font-weight: $semiBold600;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }
 
 @mixin buttonDefault {
-	font-size: 16px; 
+	font-size: $fs16; 
 	text-decoration: none; 
-	font-family: 'Source Sans 3', Helvetica, Arial, sans-serif; 
+	font-weight: $regular400;  
 	font-style: normal; 
-	letter-spacing: 0px; 
-	line-height: 22.4px; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
+}
+
+@mixin tagEmphasis {
+	font-size: $fs14; 
 	text-decoration: none; 
+	font-weight: $bold;  
+	font-style: normal; 
+	letter-spacing: $lsSm; 
+	line-height: $lhParagraph; 
+	text-transform: none; 
 }

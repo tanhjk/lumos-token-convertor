@@ -1,16 +1,16 @@
 //base styles 
 const identities = {
 	 		colors:{
-				cobalt900: '#003058',
-				cobalt800: '#004781',
-				cobalt700: '#005daa',
-				cobalt600: '#147cd3',
-				cobalt500: '#309ffc',
-				cobalt400: '#56b2ff',
-				cobalt300: '#7bc3ff',
-				cobalt200: '#a0d4ff',
-				cobalt100: '#c5e5ff',
-				cobalt000: '#eaf5ff',
+				cobalt900: '#05152e',
+				cobalt800: '#0a2b5c',
+				cobalt700: '#1355b8',
+				cobalt600: '#2a66c1',
+				cobalt500: '#4177c9',
+				cobalt400: '#5788d1',
+				cobalt300: '#6e99d9',
+				cobalt200: '#85a9e0',
+				cobalt100: '#9dbbe7',
+				cobalt000: '#ceddf3',
 				red000: '#ffebeb',
 				red100: '#ffbebe',
 				red200: '#ff9191',
@@ -63,6 +63,7 @@ const identities = {
 				fs14: '14px',
 				fs12: '12px',
 				fs10: '10px',
+				fs28: '28px',
 		},
 		spacings:{
 				spacingXs: '4px',
@@ -70,7 +71,8 @@ const identities = {
 				spacingMd: '16px',
 				spacingLg: '24px',
 				spacingXl: '32px',
-				spacingXxl: '64px',
+				spacingXxxl: '64px',
+				spacingXxl: '48px',
 		},
 		borderRadius:{
 				brContainer: '8px',
@@ -92,7 +94,7 @@ const identities = {
 				bold: '700',
 		},
 		letterSpacing:{
-				spacingSm: '0px',
-				spacingMd: '1px',
+				lsSm: '0px',
+				lsMd: '1px',
 		},
 }

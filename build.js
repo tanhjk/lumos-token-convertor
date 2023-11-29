@@ -1,7 +1,7 @@
 const StyleDictionary = require('style-dictionary');
 // const { registerTransforms, transformDimension } = require('@tokens-studio/sd-transforms')
 // registerTransforms(StyleDictionary);
-// const tokens = require("./tokens/tokens.json")
+const tokens = require("./tokens/tokens.json")
 const path = require('path');
 const fs = require('fs');
 
@@ -165,13 +165,13 @@ StyleDictionary.registerFormat({
         if(designTokens[it].type === 'dimension'){
           switch(x){
             case 'font-weight':
-              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value};\n`
+              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value};${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
               break;
             case 'line-height':
-              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}%;\n`
+              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}%;${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
               break;
             default:
-              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}px;\n`
+              strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
               break;
           }
         }
@@ -273,17 +273,17 @@ StyleDictionary.registerFormat({
         if(designTokens[it].type === 'dimension'){
           strTokens += `$${kebabToCC(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           }else{
-            console.log(x);
+            // console.log(x);
             switch(x){
               case 'texts' :
               case 'links' :
-                strTokens += `@mixin ${kebabToCC(it)}{ \n color: $${designTokens[it].value};\n}\n`
+                strTokens += `@mixin ${kebabToCC(it)}{ \n color: $${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n}\n`
                 break; 
               case 'backgrounds' :
-                strTokens += `@mixin ${kebabToCC(it)}{ \n background-color: $${designTokens[it].value};\n}\n`
+                strTokens += `@mixin ${kebabToCC(it)}{ \n background-color: $${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n}\n`
                 break;
               case 'icons' :
-                  strTokens += `@mixin ${kebabToCC(it)}{ \n fill: $${designTokens[it].value};\n}\n`
+                  strTokens += `@mixin ${kebabToCC(it)}{ \n color: $${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n}\n`
                   break; 
               case 'charts':
                 let chartTokens = designTokens[it];
@@ -291,9 +291,9 @@ StyleDictionary.registerFormat({
                 for (let ct in chartTokens){
                   // console.log(ct, '-',it);
                   if(chartTokens[ct].type === 'dimension'){
-                  strTokens += `$${kebabToCC(it+'-'+ct)}: ${chartTokens[ct].value}px; ${chartTokens[ct].description ? '/**  **/' : ''}  \n`
+                  strTokens += `$${kebabToCC(it+'-'+ct)}: ${chartTokens[ct].value}px; ${chartTokens[ct].description ? '/**' + chartTokens[ct].description +  '**/' : ''}  \n`
                   }else{
-                  strTokens += `$${kebabToCC(it+'-'+ct)}: $${chartTokens[ct].value};\n`
+                  strTokens += `$${kebabToCC(it+'-'+ct)}: $${chartTokens[ct].value}; ${chartTokens[ct].description ? '/**' + chartTokens[ct].description +  '**/' : ''}\n`
                   }
                 }
                 break; 
@@ -302,13 +302,13 @@ StyleDictionary.registerFormat({
               case 'toggle':
               case 'borders':
                 if(it.indexOf('border') >= 0){
-                  strTokens += `@mixin ${kebabToCC(it)}{ \n border-color: $${designTokens[it].value};\n}\n`
+                  strTokens += `@mixin ${kebabToCC(it)}{ \n border-color: $${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n}\n`
                 }else{
-                  strTokens += `@mixin ${kebabToCC(it)}{ \n background-color: $${designTokens[it].value};\n}\n`
+                  strTokens += `@mixin ${kebabToCC(it)}{ \n background-color: $${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n}\n`
                 }
                 break; 
               default: 
-                strTokens += `$${kebabToCC(it)}: $${designTokens[it].value};\n`
+                strTokens += `$${kebabToCC(it)}: $${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
                 break;
 
             } 
@@ -335,7 +335,104 @@ StyleDictionary.registerFormat({
     return strTokens;
   },
 });
+StyleDictionary.registerFormat({
+  name: 'tsJSFormat',
+  formatter: function ({ dictionary }) {
+    let strTokens = `//Type tokens in JS \n`;
 
+    const obj = dictionary.tokens.typography; 
+
+    strTokens += `textStyles:{ \n\t `;
+    for (let x in obj) {
+ 
+      strTokens += ` ${kebabToCC(x)}:  \`\n`
+      let designTokens = obj[x];
+      
+      for (let it in designTokens) {  
+
+        switch(it){
+          case 'fontSize':
+            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          break;
+          case 'fontWeight':
+            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          break;
+          // case 'fontFamily':
+          //   strTokens += `\t${kebabize(it)}: '${designTokens[it].value}', Helvetica, Arial, sans-serif; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          // break;
+          // case 'fontStyle':
+          //   strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          // break;
+          case 'letterSpacing':
+            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          break;
+          case 'lineHeight':
+            if(x.indexOf('title') >=0){
+              strTokens += `\t${kebabize(it)}: 115%; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            }else{
+            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          }
+          break;
+          // case 'textCase':
+          //   strTokens += `\ttext-decoration: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          // break;
+
+          default: 
+          break;
+        }
+
+      }
+      strTokens += `\`\n`;
+    } 
+    strTokens += `}`;
+    dictionary.allTokens.map((tkn) => {
+      if (dictionary.usesReference(tkn.original.value)) {
+        // Note: make sure to use `token.original.value` because
+        // `token.value` is already resolved at this point.
+        const refs = dictionary.getReferences(tkn.original.value);
+        refs.forEach((ref) => { 
+         
+          strTokens = strTokens.replace(ref.value, function () {
+            return `${ref.path[2]}`;
+          });
+        });
+      }
+    });
+    return strTokens;
+  },
+});
+ 
+function findIdentitiesByVal (val, type){
+
+  const identities = tokens.identities; 
+  var returnVal = '' 
+let fs ;
+  switch(type){
+    case 'fontSize':
+     fs = identities['font-sizes'] 
+      returnVal = `$${Object.keys(fs).find(key => fs[key].value === val)}`; 
+      break;
+    case 'letterSpacing':
+      fs = identities['letter-spacing']
+      // console.log(fs);
+      returnVal = `$${Object.keys(fs).find(key => fs[key].value === val)}`;
+      // console.log(returnVal);
+      break;
+    case 'fontWeight':
+      fs = identities['font-weight']
+      // console.log(fs);
+      returnVal = `$${Object.keys(fs).find(key => fs[key].value === val)}`;
+      // console.log(returnVal);
+      break;
+     
+    default:
+      returnVal = val;
+      break
+  }
+
+  return kebabToCC(returnVal);
+
+}
 
 StyleDictionary.registerFormat({
   name: 'tsSCSSFormat',
@@ -354,25 +451,29 @@ StyleDictionary.registerFormat({
 
         switch(it){
           case 'fontSize':
-            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            strTokens += `\t${kebabize(it)}: ${findIdentitiesByVal(designTokens[it].value,  it)}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
           case 'textDecoration':
             strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
-          case 'fontFamily':
-            strTokens += `\t${kebabize(it)}: '${designTokens[it].value}', Helvetica, Arial, sans-serif; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+          case 'fontWeight':
+            strTokens += `\t${kebabize(it)}: ${findIdentitiesByVal(designTokens[it].value,  it)};  ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
           case 'fontStyle':
             strTokens += `\t${kebabize(it)}: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
           case 'letterSpacing':
-            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            strTokens += `\t${kebabize(it)}: ${findIdentitiesByVal(designTokens[it].value,  it)}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
           case 'lineHeight':
-            strTokens += `\t${kebabize(it)}: ${designTokens[it].value}px; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            if(x.indexOf('title') >=0){
+            strTokens += `\t${kebabize(it)}: $lhHeadline; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            }else{
+              strTokens += `\t${kebabize(it)}: $lhParagraph; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            }
           break;
           case 'textCase':
-            strTokens += `\ttext-decoration: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
+            strTokens += `\ttext-transform: ${designTokens[it].value}; ${designTokens[it].description ? '/**' + designTokens[it].description+ ' **/' : ''}\n`
           break;
 
           default: 
@@ -383,19 +484,21 @@ StyleDictionary.registerFormat({
       strTokens += `}\n`;
     } 
     // strTokens += `}`;
-    dictionary.allTokens.map((tkn) => {
-      if (dictionary.usesReference(tkn.original.value)) {
-        // Note: make sure to use `token.original.value` because
-        // `token.value` is already resolved at this point.
-        const refs = dictionary.getReferences(tkn.original.value);
-        refs.forEach((ref) => { 
+     
+
+    // dictionary.allTokens.map((tkn) => { 
+    //   if (dictionary.usesReference(tkn.original.value)) {
+    //     // Note: make sure to use `token.original.value` because
+    //     // `token.value` is already resolved at this point.
+    //     const refs = dictionary.getReferences(tkn.original.value);
+    //     refs.forEach((ref) => { 
          
-          strTokens = strTokens.replace(ref.value, function () {
-            return `${ref.path[2]}`;
-          });
-        });
-      }
-    });
+    //       strTokens = strTokens.replace(ref.value, function () {
+    //         return `${ref.path[2]}`;
+    //       });
+    //     });
+    //   }
+    // });
     return strTokens;
   },
 });
@@ -476,6 +579,25 @@ const myStyleDictionary = StyleDictionary.extend({
           destination: `_designTokens.scss`,  
           filter: 'dsFilter',
           format: 'dtSCSSFormat',
+          options: {
+            outputReferences: true, 
+          }, 
+        },
+      ],
+    },
+    'js/textStyles': {
+      transforms: [
+        'attribute/cti',
+        'name/cti/kebab', 
+        // 'size/px',
+        'color/hex',
+      ],
+      buildPath: `${dsm_dir}js/`,
+      files: [
+        {
+          destination: `_typography.js`,  
+          filter: 'tsFilter',
+          format: 'tsJSFormat',
           options: {
             outputReferences: true, 
           }, 
