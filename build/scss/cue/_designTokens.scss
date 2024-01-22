@@ -1,0 +1,286 @@
+//design tokens 
+
+//texts tokens
+@mixin textPrimary{ 
+ color: $slate000; 
+}
+@mixin textTeritary{ 
+ color: $slate300; 
+}
+@mixin textInverse{ 
+ color: $slate900; 
+}
+@mixin textDisabled{ 
+ color: $slate400; 
+}
+@mixin textAlert{ 
+ color: $red200; 
+}
+@mixin textWarning{ 
+ color: $orange500; 
+}
+@mixin textSuccess{ 
+ color: $green400; 
+}
+@mixin textSecondary{ 
+ color: $slate200; 
+}
+@mixin textHighlight{ 
+ color: $texts; 
+}
+@mixin textHiglighterBackground{ 
+ color: $mustard200; 
+}
+@mixin textHover{ 
+ color: $slate000; /**use in tabs **/
+}
+@mixin textHighlightTwo{ 
+ color: $mustard400; 
+}
+
+//links tokens
+@mixin linkPrimary{ 
+ color: $indigo200; 
+}
+@mixin linkSecondary{ 
+ color: $slate100; 
+}
+@mixin linkPrimaryHover{ 
+ color: $indigo000; 
+}
+@mixin linkSecondaryHover{ 
+ color: $slate000; 
+}
+
+//backgrounds tokens
+@mixin backgroundPrimary{ 
+ background-color: $slate700; 
+}
+@mixin backgroundSecondary{ 
+ background-color: $slate100; 
+}
+@mixin backgroundContainer{ 
+ background-color: $slate800; 
+}
+@mixin backgroundAvatar{ 
+ background-color: $slate200; 
+}
+@mixin backgroundSuccess{ 
+ background-color: $green500; 
+}
+@mixin backgroundCanvas{ 
+ background-color: $slate900; 
+}
+@mixin backgroundFloating{ 
+ background-color: $slate600; /**internal note: use in dropdown, tooltips **/
+}
+@mixin backgroundDisabled{ 
+ background-color: $slate200; 
+}
+@mixin backgroundTableHeader{ 
+ background-color: $cobalt700; 
+}
+@mixin backgroundInfo{ 
+ background-color: $cobalt700; /**internal note: use in tag (beta) and chip **/
+}
+@mixin backgroundHover{ 
+ background-color: $slate500; /**internal note: use in menu, dropdown **/
+}
+@mixin backgroundNotificationBanner{ 
+ background-color: $slate900; 
+}
+@mixin backgroundOverlay{ 
+ background-color: $texts; 
+}
+@mixin backgroundHighlight{ 
+ background-color: $cobalt700; 
+}
+@mixin backgroundSelected{ 
+ background-color: $indigo700; /**internal note: use in menu, dropdown **/
+}
+
+//icons tokens
+@mixin iconPrimary{ 
+ color: $slate000; 
+}
+@mixin iconSecondary{ 
+ color: $slate300; 
+}
+@mixin iconActive{ 
+ color: $green400; 
+}
+@mixin iconAlert{ 
+ color: $red200; 
+}
+@mixin iconSuccess{ 
+ color: $green600; 
+}
+@mixin iconInverse{ 
+ color: $slate900; 
+}
+@mixin iconDisabled{ 
+ color: $slate400; 
+}
+@mixin iconHighlight{ 
+ color: $indigo300; 
+}
+@mixin iconWarning{ 
+ color: $orange300; 
+}
+@mixin iconHover{ 
+ color: $indigo700; 
+}
+@mixin xIconBackground{ 
+ color: $cobalt100; 
+}
+@mixin iconHighlightTwo{ 
+ color: $mustard400; 
+}
+
+//sizes tokens
+$drawerWidth: 264px; 
+$drawerWidthMinimized: 76px; 
+$buttonMinHeight: 40px; 
+$buttonMinWidth: 120px; 
+$tabUnderlineWidth: 48px; 
+$tooltipMaxWidth: 300px; 
+$popUpWidth: 755px; 
+$textAreaMinHeight: 100px; 
+$textAreaMaxHeight: 250px; 
+$optionSwitcherMinWidth: 270px; 
+$optionSwitcherBaseMinWidth: 120px; 
+$navMenuHeight: 40px; 
+
+//buttons tokens
+@mixin buttonPrimary{ 
+ background-color: $green400; 
+}
+@mixin buttonSecondary{ 
+ background-color: $slate600; 
+}
+@mixin buttonSecondaryBorder{ 
+ border-color: $slate300; 
+}
+@mixin buttonPrimaryHover{ 
+ background-color: $green400; 
+}
+@mixin buttonSecondaryHover{ 
+ background-color: $slate000; 
+}
+@mixin buttonDisabled{ 
+ background-color: $slate100; 
+}
+
+//checkbox tokens
+@mixin checkboxActive{ 
+ background-color: $indigo700; 
+}
+@mixin checkboxHoverBorder{ 
+ border-color: $indigo700; 
+}
+@mixin checkboxDefault{ 
+ background-color: $white; 
+}
+@mixin checkboxDefaultBorder{ 
+ border-color: $slate200; 
+}
+@mixin checkboxDisabled{ 
+ background-color: $slate100; 
+}
+@mixin checkboxActiveBorder{ 
+ border-color: $indigo700; 
+}
+@mixin checkboxDisabledBorder{ 
+ border-color: $slate200; 
+}
+@mixin checkboxTick{ 
+ background-color: $slate000; 
+}
+@mixin checkboxLabel{ 
+ background-color: $slate100; 
+}
+@mixin checkboxTickDisable{ 
+ background-color: $slate400; 
+}
+
+//toggle tokens
+@mixin toggleOn{ 
+ background-color: $cobalt700; 
+}
+@mixin toggleOff{ 
+ background-color: $slate200; 
+}
+@mixin toggleDisabled{ 
+ background-color: $slate200; 
+}
+@mixin toggleSwitch{ 
+ background-color: $slate000; 
+}
+@mixin toggleOffHover{ 
+ background-color: $slate400; 
+}
+@mixin toggleSwitchDisabled{ 
+ background-color: $slate100; 
+}
+@mixin toggleOnHover{ 
+ background-color: $cobalt700; 
+}
+
+//borders tokens
+@mixin borderPrimary{ 
+ border-color: $slate600; 
+}
+@mixin borderSecondary{ 
+ border-color: $slate700; 
+}
+
+//input tokens
+$inputDefaultBorder: $slate500; 
+$inputActiveBorder: $indigo700; 
+$inputErrorBorder: $red200; 
+$inputDisableBorder: $slate500; 
+$inputFill: $slate700; 
+$inputDisabledFill: $slate700; 
+$inputDragoverBorder: $indigo700; /**new: to replace border-dragover **/
+$inputDisplayFill: $slate700; 
+$inputActiveFill: $indigo500; 
+
+//optionSwitcher tokens
+$optionSwitch: $slate000; 
+$optionSwitchSelected: $cobalt700; 
+$optionSwitchBorder: $slate200; 
+$optionSwitchHover: $cobalt000; 
+$optionSwitchDisabled: $slate100; 
+
+//display tokens
+$displayFill: $indigo900; 
+$displayBorder: $input; 
+
+//uiControlBar tokens
+$progressBarBase: $slate200; 
+$progressBarHighlight: $indigo700; 
+$scrollBar: $slate200; 
+
+//tab tokens
+$tabDefault: $slate200; 
+$tabActive: $texts; 
+$tabHover: $slate000; 
+$tabDisable: $slate400; 
+
+//container tokens
+$containerOne: $slate800; 
+$containerOneHover: $slate500; 
+$containerOneSelected: $slate800; 
+$containerOneDisable: $slate800; 
+$containerTwo: $slate700; 
+$containerTwoHover: $slate500; 
+$containerTwoSelected: $slate700; 
+$containerTwoDisabled: $slate700; 
+
+//filter tokens
+$filterFill: $indigo300; 
+$filterBorder: $indigo300; 
+$filterHover: $slate600; 
+$filterDisableFill: $slate300; 
+$filterSelectedBorder: $slate000; 
+$filterValueFill: $white; 
